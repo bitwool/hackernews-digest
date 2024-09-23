@@ -1,7 +1,7 @@
-import ArticleList from "./components/ArticleList";
-import Sidebar from "./components/Sidebar";
+import ArticleList from "../components/ArticleList";
+import Sidebar from "../components/Sidebar";
 
-export default function Home() {
+export default function Page() {
   return (
     <div className="flex h-screen">
       <Sidebar />

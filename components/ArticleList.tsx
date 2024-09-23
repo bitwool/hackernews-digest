@@ -1,12 +1,9 @@
 "use client";
 
-import { useSearchParams } from 'next/navigation';
-
-import { articles } from '../data/articles';
+import { articles } from "../lib/articles";
 
 export default function ArticleList({ initialDate }: { initialDate: string }) {
-  const searchParams = useSearchParams();
-  const date = searchParams.get("date") || initialDate;
+  const date = initialDate;
 
   const dailyArticles = articles[date] || [];
 
