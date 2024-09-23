@@ -1,9 +1,14 @@
 "use client";
 
+import { Suspense } from "react";
+
+import { useSearchParams } from "next/navigation";
+
 import { articles } from "../lib/articles";
 
-export default function ArticleList({ initialDate }: { initialDate: string }) {
-  const date = initialDate;
+function ArticleContent({ initialDate }: { initialDate: string }) {
+  const searchParams = useSearchParams();
+  const date = searchParams.get("date") || initialDate;
 
   const dailyArticles = articles[date] || [];
 
@@ -17,5 +22,13 @@ export default function ArticleList({ initialDate }: { initialDate: string }) {
         </div>
       ))}
     </div>
+  );
+}
+
+export default function ArticleList({ initialDate }: { initialDate: string }) {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ArticleContent initialDate={initialDate} />
+    </Suspense>
   );
 }

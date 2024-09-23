@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
-import Link from 'next/link';
+import Link from "next/link";
 
 const dates = [
   "2023-09-23",
@@ -16,7 +16,7 @@ export default function Sidebar() {
   const [activeDate, setActiveDate] = useState(dates[0]);
 
   return (
-    <aside className="w-64 bg-gray-100 p-4 overflow-y-auto">
+    <aside className=" bg-gray-100 p-4 overflow-y-auto">
       <nav>
         <ul>
           {dates.map((date) => (

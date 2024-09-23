@@ -1,14 +1,11 @@
-// import './globals.css';
+import "./globals.css";
 
-// import type { Metadata } from 'next';
-// import { Inter } from 'next/font/google';
+import type { Metadata } from "next";
 
-// const inter = Inter({ subsets: ["latin"] });
-
-// export const metadata: Metadata = {
-//   title: "Hot Articles",
-//   description: "Daily hot articles",
-// };
+export const metadata: Metadata = {
+  title: "Hot Articles",
+  description: "Daily hot articles",
+};
 
 export default function RootLayout({
   children,
