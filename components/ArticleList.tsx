@@ -1,14 +1,11 @@
 "use client";
 
-import { Suspense } from "react";
+import { Suspense } from 'react';
 
-import { useSearchParams } from "next/navigation";
-
-import { articles } from "../lib/articles";
+import { articles } from '../lib/articles';
 
 function ArticleContent({ initialDate }: { initialDate: string }) {
-  const searchParams = useSearchParams();
-  const date = searchParams.get("date") || initialDate;
+  const date = initialDate;
 
   const dailyArticles = articles[date] || [];
 
