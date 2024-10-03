@@ -1,11 +1,12 @@
-export interface NewsItem {
+export interface Article {
     id: string;
     title: string;
     summary: string;
+    comments: string[];
     date: string;
 }
 
-export interface DailyNews {
+export interface DailyArticles {
     date: string;
-    news: NewsItem[];
+    articles: Article[];
 }

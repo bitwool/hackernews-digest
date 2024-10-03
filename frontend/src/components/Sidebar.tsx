@@ -1,5 +1,3 @@
-import React from "react";
-
 interface SidebarProps {
   dates: string[];
   selectedDate: string;
@@ -15,7 +13,7 @@ export default function Sidebar({
     <aside className="w-64 bg-white shadow-md">
       <nav className="p-4">
         <h2 className="text-xl font-semibold mb-4">News Dates</h2>
-        <ul>
+        <ul className="max-h-[calc(100vh-8rem)] overflow-y-auto">
           {dates.map((date) => (
             <li key={date} className="mb-2">
               <button

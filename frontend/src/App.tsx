@@ -12,7 +12,7 @@ export default function App() {
   };
 
   const selectedNews =
-    testData.find((item) => item.date === selectedDate)?.news || [];
+    testData.find((item) => item.date === selectedDate)?.articles || [];
   const dates = testData.map((item) => item.date);
 
   return (
@@ -22,7 +22,7 @@ export default function App() {
         selectedDate={selectedDate}
         onDateSelect={handleDateClick}
       />
-      <NewsContent selectedDate={selectedDate} news={selectedNews} />
+      <NewsContent selectedDate={selectedDate} articles={selectedNews} />
     </div>
   );
 }
