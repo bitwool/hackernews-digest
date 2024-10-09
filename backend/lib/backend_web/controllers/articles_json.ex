@@ -7,6 +7,7 @@ defmodule BackendWeb.ArticlesJSON do
 
   defp data(%Article{} = datum) do
     %{
+      id: datum.id,
       title: datum.title,
       digest: datum.digest,
       type: datum.type,

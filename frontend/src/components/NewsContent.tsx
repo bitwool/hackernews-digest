@@ -18,8 +18,8 @@ export default function NewsContent({
         {articles.map((article: Article) => (
           <div key={article.id} className="bg-white shadow rounded-lg p-6">
             <h2 className="text-xl font-semibold mb-2">{article.title}</h2>
-            <p className="text-gray-600">{article.summary}</p>
-            <Comments comments={article.comments} />
+            <p className="text-gray-600">{article.digest}</p>
+            <Comments comments={article.comments.comments} />
           </div>
         ))}
       </div>

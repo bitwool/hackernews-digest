@@ -1,9 +1,14 @@
-export interface Article {
-    id: string;
-    title: string;
-    summary: string;
+export interface Comment {
     comments: string[];
-    date: string;
+}
+
+export interface Article {
+    id: number
+    title: string;
+    digest: string;
+    type: string;
+    comments: Comment;
+    query_date: string;
 }
 
 export interface DailyArticles {
